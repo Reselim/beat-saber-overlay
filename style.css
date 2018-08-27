@@ -1,0 +1,138 @@
+body {
+	font-family: "Montserrat", sans-serif;
+
+	color: white;
+	/* background: black; */
+
+	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+}
+
+#overlay {
+	position: absolute;
+	left: 50px;
+	bottom: 50px;
+}
+
+/* Beatmap */
+
+#beatmap {
+	display: flex;
+}
+
+#beatmap img {
+	width: 90px;
+	height: 90px;
+	border-radius: 6px;
+}
+
+#meta {
+	display: flex;
+	flex-direction: column;
+
+	flex-grow: 1;
+	padding: 0 0 0 16px;
+}
+
+#text {
+	flex-grow: 1;
+
+	/* Fix text offset */
+	transform: translate(0, -5px);
+}
+
+#title {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+#subtitle {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+#artist {
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+#difficulty, #bpm {
+	display: inline-block;
+
+	font-size: 10px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+#difficulty {
+	padding: 4px 5px 4px 8px;
+
+	color: black;
+	background: white;
+	border-radius: 4px;
+}
+
+#bpm {
+	margin: 0 0 0 8px;
+}
+
+/* Performance */
+
+#performance {
+	margin: 0 0 20px 0;
+}
+
+#rank {
+	display: inline-block;
+
+	font-size: 22px;
+	font-weight: 600;
+}
+
+#percentage {
+	display: inline-block;
+
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+
+#score {
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+/* Animations and state */
+
+#overlay {
+	--show: cubic-bezier(0.19, 1, 0.22, 1) 300ms;
+	--hide: cubic-bezier(0.55, 0.085, 0.68, 0.53) 200ms;
+}
+
+#overlay #beatmap, #overlay #performance * {
+	transition:
+		opacity var(--show),
+		transform var(--show);
+}
+
+#overlay.hidden #beatmap, #overlay.hidden #performance * {
+	opacity: 0;
+	transform: translate(0, 15px);
+	transition:
+		opacity var(--hide),
+		transform var(--hide);
+}
+
+#overlay #score {
+	transition-delay: 150ms;
+}
+
+#overlay #rank, #overlay #percentage {
+	transition-delay: 300ms;
+}
