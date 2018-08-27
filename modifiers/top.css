@@ -8,6 +8,6 @@
 	flex-direction: column-reverse;
 }
 
-#overlay.hidden #beatmap, #overlay.hidden #performance * {
+#overlay.hidden #beatmap, #overlay.hidden #performance span {
 	transform: translate(0, -15px);
 }

@@ -108,6 +108,7 @@ body {
 }
 
 #score {
+	display: block;
 	font-size: 32px;
 	font-weight: 700;
 	letter-spacing: 2px;
@@ -120,24 +121,24 @@ body {
 	--hide: cubic-bezier(0.55, 0.085, 0.68, 0.53) 200ms;
 }
 
-#overlay #beatmap, #overlay #performance * {
+#overlay #beatmap, #overlay #performance span {
 	transition:
 		opacity var(--show),
 		transform var(--show);
 }
 
-#overlay.hidden #beatmap, #overlay.hidden #performance * {
+#overlay.hidden #beatmap, #overlay.hidden #performance span {
 	opacity: 0;
 	transform: translate(0, 15px);
 	transition:
 		opacity var(--hide),
-		transform var(--hide);
+		transform var(--hide) !important;
 }
 
 #overlay #score {
-	transition-delay: 150ms;
+	transition-delay: 150ms !important;
 }
 
 #overlay #rank, #overlay #percentage {
-	transition-delay: 300ms;
+	transition-delay: 300ms !important;
 }
