@@ -1,0 +1,13 @@
+#overlay {
+	top: 50px;
+}
+
+#performance {
+	order: 1;
+	margin: 20px 0 0 0;
+	flex-direction: column-reverse;
+}
+
+#overlay.hidden #beatmap, #overlay.hidden #performance * {
+	transform: translate(0, -15px);
+}

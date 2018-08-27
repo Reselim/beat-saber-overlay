@@ -3,6 +3,7 @@ if (location.hash) {
 
 	modifiers.forEach((modifier) => {
 		var link = document.createElement("link");
+		
 		link.setAttribute("rel", "stylesheet");
 		link.setAttribute("href", "./modifiers/" + modifier + ".css");
 
