@@ -2,7 +2,7 @@
 
 A web-based overlay for Beat Saber.
 
-![preview](https://i.imgur.com/hXM0BMZ.png)
+![preview](https://i.imgur.com/fOg4TUp.png)
 
 ## Installation (OBS)
 
