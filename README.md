@@ -15,7 +15,7 @@ A web-based overlay for Beat Saber.
 
 ## Scaling
 
-This overlay may look too small on larger canvases, because it lacks scaling. You can use this as a custom css snippet to scale the overlay:
+Scaling isn't built into the overlay by default, however you can add a custom css snippet:
 
 ```css
 :root {
