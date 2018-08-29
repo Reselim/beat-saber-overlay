@@ -6,7 +6,7 @@ A web-based overlay for Beat Saber.
 
 ## Installation (OBS)
 
-1. Download/install the [BeatSaberHTTPStatus plugin](https://github.com/opl-/beatsaber-http-status)
+1. Download and install the [BeatSaberHTTPStatus plugin](https://github.com/opl-/beatsaber-http-status)
 2. In OBS, create a Browser source
 
 ![image](https://i.imgur.com/WyTjdtd.png)
