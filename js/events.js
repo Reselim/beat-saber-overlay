@@ -14,5 +14,13 @@ const events = {
 		ui.performance(data.performance);
 	},
 
+	noteMissed(data) {
+		ui.performance(data.performance);
+	},
+	
+	bombCut(data) {
+		ui.performance(data.performance);
+	},
+
 	menu: ui.hide
 }

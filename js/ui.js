@@ -4,6 +4,7 @@ const ui = (() => {
 	var rank = document.getElementById("rank");
 	var percentage = document.getElementById("percentage");
 	var score = document.getElementById("score");
+	var combo = document.getElementById("combo");
 
 	var cover = document.getElementById("cover");
 
@@ -21,6 +22,7 @@ const ui = (() => {
 	return {
 		performance(data) {
 			score.innerText = format(data.score);
+			combo.innerText = data.combo;
 			rank.innerText = data.rank;
 			percentage.innerText = (data.currentMaxScore > 0 ? (Math.floor((data.score / data.currentMaxScore) * 1000) / 10) : 0) + "%";
 		},
