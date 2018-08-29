@@ -25,10 +25,15 @@ body {
 	display: flex;
 }
 
-#beatmap img {
+#cover {
+	overflow: hidden;
+	border-radius: 6px;
+	position: relative;
+}
+
+#image {
 	width: 90px;
 	height: 90px;
-	border-radius: 6px;
 }
 
 #meta {
@@ -82,6 +87,52 @@ body {
 
 #bpm {
 	margin: 0 0 0 8px;
+}
+
+/* Progress */
+
+#cover svg {
+	transform: rotate(-90deg);
+}
+
+#cover div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 90px;
+	height: 90px;
+}
+
+#cover svg, #cover div {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#darken {
+	fill: black;
+	opacity: 0.5;
+}
+
+#remaining, #progress {
+	fill: transparent;
+	stroke: white;
+	stroke-width: 4px;
+}
+
+#remaining {
+	opacity: 0.25;
+}
+
+#progress {
+	stroke-dasharray: 188.495px, 188.495px;
+	stroke-dashoffset: 188.495px;
+}
+
+#progress-text {
+	font-size: 16px;
+	font-weight: 600;
 }
 
 /* Performance */

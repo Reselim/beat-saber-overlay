@@ -22,7 +22,20 @@
 			</div>
 
 			<div id="beatmap">
-				<img id="cover">
+				<div id="cover">
+					<img id="image">
+					
+					<svg width="90" height="90">
+						<rect width="90" height="90" id="darken"></rect>
+						<circle cx="45" cy="45" r="30" id="remaining"></circle>
+						<circle cx="45" cy="45" r="30" id="progress"></circle>
+					</svg>
+
+					<div>
+						<span id="progress-text">0:00</span>
+					</div>
+				</div>
+
 				<div id="meta">
 					<div id="text">
 						<span id="title">Title</span>

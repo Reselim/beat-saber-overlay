@@ -5,7 +5,7 @@ if (location.hash) {
 		var link = document.createElement("link");
 		
 		link.setAttribute("rel", "stylesheet");
-		link.setAttribute("href", "./modifiers/" + modifier + ".css");
+		link.setAttribute("href", `./modifiers/${modifier}.css`);
 
 		document.head.appendChild(link);
 	});
