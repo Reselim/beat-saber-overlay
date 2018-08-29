@@ -11,7 +11,7 @@ A web-based overlay for Beat Saber.
 
 ![image](https://i.imgur.com/WyTjdtd.png)
 
-3. Set the URL as `https://reselim.github.io/overlay` and the width and height as your canvas size (1280x720, etc.)
+3. Set the URL as `http://reselim.github.io/overlay` and the width and height as your canvas size (1280x720, etc.)
 
 ## Scaling
 
@@ -28,7 +28,7 @@ This overlay may look too small on larger canvases, because it lacks scaling. Yo
 Modifiers can be added by using the URL fragment, like so:
 
 ```
-https://reselim.github.io/overlay#top
+http://reselim.github.io/overlay#top
 ```
 
 You can add multiple modifiers using commas.
