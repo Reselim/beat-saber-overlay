@@ -15,7 +15,7 @@ A web-based overlay for Beat Saber
 
 ![image](https://imgur.com/KxowYrw.png)
 
-4. (Optional) Add `#scale` to the end of the URL (ex. `http://reselim.github.io/overlay#scale`) to scale the overlay by 1.5x for use on 1080p canvases
+4. (Optional) For 1080p canvases, add `#scale` to the end of the URL (ex. `http://reselim.github.io/overlay#scale`) to scale the overlay by 1.5x
 
 ## Modifiers
 
