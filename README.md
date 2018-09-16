@@ -29,6 +29,8 @@ Multiple modifiers can be used with commas as a delimiter.
 
 - `top`
 	* Moves the overlay to the top and reverses the layout vertically
+- `rtl`
+	* Moves the overlay to the right and uses right-to-left text
 - `scale`
 	* Scales the overlay by 1.5x, for use on 1080p canvases
 - `test`

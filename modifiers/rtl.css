@@ -1,0 +1,12 @@
+#overlay {
+	direction: rtl;
+	right: 40px;
+}
+
+#score {
+	transform: translate(2px, 0);
+}
+
+#bpm {
+	direction: ltr;
+}

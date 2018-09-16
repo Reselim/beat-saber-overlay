@@ -41,7 +41,7 @@ body {
 	flex-direction: column;
 
 	flex-grow: 1;
-	padding: 0 0 0 16px;
+	padding: 0 16px;
 }
 
 #text {
@@ -49,6 +49,11 @@ body {
 
 	/* Fix text offset */
 	transform: translate(0, -5px);
+}
+
+#titles {
+	display: flex;
+	align-items: flex-end;
 }
 
 #title {
@@ -59,6 +64,7 @@ body {
 #subtitle {
 	font-size: 14px;
 	font-weight: 600;
+	margin: 0 4px 2px 4px;
 }
 
 #artist {
@@ -86,7 +92,7 @@ body {
 }
 
 #bpm {
-	margin: 0 0 0 8px;
+	margin: 0 8px;
 }
 
 /* Progress */
