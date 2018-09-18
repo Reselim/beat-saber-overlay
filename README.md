@@ -6,21 +6,21 @@ A web-based overlay for Beat Saber
 
 ## Installation (OBS)
 
-1. Download and install the [BeatSaberHTTPStatus plugin](https://github.com/opl-/beatsaber-http-status)
+1. Download and install the [BeatSaberHTTPStatus plugin](https://github.com/opl-/beatsaber-http-status/releases/latest)
 
-1. Create a Browser source
+1. Create a Browser source  
   ![image](https://i.imgur.com/WyTjdtd.png)
 
-1. Set the URL as `http://reselim.github.io/overlay` and the size equal to your canvas size (1280x720, etc.)
-  ![image](https://imgur.com/KxowYrw.png)
+1. Set the URL as `http://overlay.updownleftdie.com` and the size equal to your canvas size (1280x720, etc.)  
+  ![image](https://i.imgur.com/mVvuPvU.png)
 
-1. (Optional) For 1080p canvases, add `#scale` to the end of the URL (ex. `http://reselim.github.io/overlay#scale`) to scale the overlay by 1.5x
+1. (Optional) For 1080p canvases, add `#scale` to the end of the URL (ex. `http://overlay.updownleftdie.com/#scale`) to scale the overlay by 1.5x
 
 ## Modifiers
 
 Modifiers can be added by using the URL fragment, like so:
 
-```http://reselim.github.io/overlay#top```
+```http://overlay.updownleftdie.com/#top```
 
 Multiple modifiers can be used with commas as a delimiter.
 
@@ -35,10 +35,10 @@ Multiple modifiers can be used with commas as a delimiter.
 
 ### Remote IP
 
-If Beat Saber is running on a diffrent computer than what is trying to use this overlay. You can specify a custom IP with the `ip` query parameter
+If Beat Saber is running on a diffrent computer than what is trying to use this overlay. You can specify a custom IP with the `ip` query parameter (note: this HAS to be `http` and not `https`)
 
-```http://reselim.github.io/overlay?ip=10.0.0.2```
+```http://overlay.updownleftdie.com/?ip=10.0.0.2```
 
 You can combine it with modifiers above like this:
 
-```http://reselim.github.io/overlay?ip=10.0.0.2#top,rtl```
+```http://overlay.updownleftdie.com/?ip=10.0.0.2#top,rtl,scale```
