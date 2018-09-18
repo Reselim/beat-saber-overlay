@@ -1,10 +1,15 @@
 const events = {
-	hello() {
-		console.log("Connected to Beat Saber")
+	hello(data) {
+		console.log("Connected to Beat Saber");
+
+		if (data.beatmap && data.performance) {
+			ui.beatmap(data.beatmap);
+			ui.performance(data.performance);
+			ui.show();
+		}
 	},
 
 	songStart(data, time) {
-		console.log(data, time);
 		ui.show();
 		ui.beatmap(data.beatmap, time);
 		ui.performance(data.performance);
