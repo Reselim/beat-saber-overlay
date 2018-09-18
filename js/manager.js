@@ -1,5 +1,7 @@
 function connect() {
-	var socket = new WebSocket("ws://localhost:6557/socket");
+	var urlParams = new URLSearchParams(window.location.search);
+	var ip = urlParams.get('ip') || "localhost";
+	var socket = new WebSocket(`ws://${ip}:6557/socket`);
 
 	socket.addEventListener("open", () => {
 		console.log("WebSocket opened");
