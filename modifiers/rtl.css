@@ -7,6 +7,6 @@
 	transform: translate(2px, 0);
 }
 
-#bpm {
+#difficulty, #bpm {
 	direction: ltr;
 }
