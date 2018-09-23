@@ -15,17 +15,25 @@ A web-based overlay for Beat Saber
 
 ![image](https://imgur.com/KxowYrw.png)
 
-4. (Optional) For 1080p canvases, add `#scale` to the end of the URL (ex. `http://reselim.github.io/overlay#scale`) to scale the overlay by 1.5x
+4. (Optional) For 1080p canvases, add the `scale` modifier (ex. `http://reselim.github.io/overlay?modifiers=scale`) to scale the overlay by 1.5x
 
-## Modifiers
+## Options
 
-Modifiers can be added by using the URL fragment, like so:
+Options are added to the URL query as such:
 
 ```
-http://reselim.github.io/overlay#top
+http://reselim.github.io/overlay?modifiers=top
 ```
 
-Multiple modifiers can be used with commas as a delimiter.
+### `ip` and `port`
+
+Listen to events from another IP and/or port.
+
+*NOTE: Github.io forces HTTPS, which on most browsers prevents WebSockets (including Chromium, which OBS uses) from connecting to unsecure hosts (BeatSaberHTTPStatus only uses HTTP). However Github.io doesn't force HTTPS on other domains. You can use the `http://overlay.updownleftdie.com` subdomain provided by @jaredkotoff to get around this limitation.*
+
+### `modifiers`
+
+Multiple modifiers can be seperated with commas.
 
 - `top`
 	* Moves the overlay to the top and reverses the layout vertically
