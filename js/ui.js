@@ -102,6 +102,15 @@ const ui = (() => {
 		var difficulty = document.getElementById("difficulty");
 		var bpm = document.getElementById("bpm");
 
+		const numberFormat = n => {
+			const float = parseFloat(n)
+			const int = parseInt(n)
+	
+			if (Number.isNaN(int)) return 'NaN'
+			if (float === int) return `${int}`
+			else return float.toFixed(1)
+		}
+
 		return (data, time) => {
 			if (data.difficulty === "ExpertPlus") {
 				data.difficulty = "Expert+";
@@ -114,7 +123,7 @@ const ui = (() => {
 			artist.innerText = data.songAuthorName;
 
 			difficulty.innerText = data.difficulty;
-			bpm.innerText = `${data.songBPM} BPM`;
+			bpm.innerText = `${numberFormat(data.songBPM)} BPM`;
 
 			timer.start(Date.now(), data.length);
 		}
