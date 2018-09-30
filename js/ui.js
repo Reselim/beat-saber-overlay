@@ -102,13 +102,16 @@ const ui = (() => {
 		var difficulty = document.getElementById("difficulty");
 		var bpm = document.getElementById("bpm");
 
-		const numberFormat = n => {
-			const float = parseFloat(n)
-			const int = parseInt(n)
-	
-			if (Number.isNaN(int)) return 'NaN'
-			if (float === int) return `${int}`
-			else return float.toFixed(1)
+		function format(number) {
+			if (Number.isNaN(number)) {
+				return "NaN";
+			}
+
+			if (Math.floor(number) !== number) {
+				return number.toFixed(2);
+			}
+
+			return number.toString();
 		}
 
 		return (data, time) => {
@@ -123,7 +126,7 @@ const ui = (() => {
 			artist.innerText = data.songAuthorName;
 
 			difficulty.innerText = data.difficulty;
-			bpm.innerText = `${numberFormat(data.songBPM)} BPM`;
+			bpm.innerText = `${format(data.songBPM)} BPM`;
 
 			timer.start(Date.now(), data.length);
 		}
