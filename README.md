@@ -29,8 +29,6 @@ http://reselim.github.io/overlay?modifiers=top
 
 Listen to events from another IP and/or port.
 
-*NOTE: Github.io forces HTTPS, which on most browsers (including Chromium, which OBS uses) prevents WebSockets from connecting to unsecure hosts (BeatSaberHTTPStatus only uses HTTP). Github.io doesn't force HTTPS on other domains, so you can use the `http://overlay.updownleftdie.com` subdomain provided by @jaredkotoff to get around this limitation.*
-
 ### `modifiers`
 
 Multiple modifiers can be seperated with commas.
