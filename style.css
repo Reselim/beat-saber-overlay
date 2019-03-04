@@ -74,7 +74,7 @@ body {
 	margin: 2px 0 0 0;
 }
 
-#difficulty, #bpm {
+#difficulty, #bpm, #njs {
 	display: inline-block;
 
 	font-size: 10px;
@@ -93,6 +93,10 @@ body {
 
 #bpm {
 	margin: 0 8px;
+}
+
+#njs {
+	margin: 0 0px;
 }
 
 /* Progress */
