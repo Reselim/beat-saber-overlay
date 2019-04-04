@@ -128,7 +128,12 @@ const ui = (() => {
 
 			difficulty.innerText = data.difficulty;
 			bpm.innerText = `${format(data.songBPM)} BPM`;
-			njs.innerText = `${format(data.noteJumpSpeed)} NJS`;
+
+			if (data.noteJumpSpeed) {
+				njs.innerText = `${format(data.noteJumpSpeed)} NJS`;
+			} else {
+				njs.innerText = "";
+			}
 
 			timer.start(Date.now(), data.length);
 		}
