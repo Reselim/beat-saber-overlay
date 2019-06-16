@@ -123,8 +123,14 @@ const ui = (() => {
 			cover.setAttribute("src", `data:image/png;base64,${data.songCover}`);
 
 			title.innerText = data.songName;
-			subtitle.innerText = data.songAuthorName;
-			artist.innerText = data.levelAuthorName;
+			subtitle.innerText = data.songSubName;
+			
+			if (data.levelAuthorName) {
+				artist.innerText = `${data.songAuthorName} [${data.levelAuthorName}]`;
+			} else {
+				artist.innerText = data.songAuthorName;
+			}
+			
 
 			difficulty.innerText = data.difficulty;
 			bpm.innerText = `${format(data.songBPM)} BPM`;
