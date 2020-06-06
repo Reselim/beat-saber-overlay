@@ -83,6 +83,15 @@ body {
 	letter-spacing: 3px;
 }
 
+#bsr {
+	display: inline-block;
+
+	font-size: 18px;
+	font-weight: 800;
+	letter-spacing: 3px;
+	margin: 0 0px;
+}
+
 #difficulty {
 	padding: 4px 5px 4px 8px;
 

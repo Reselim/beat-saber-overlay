@@ -39,5 +39,9 @@ Multiple modifiers can be seperated with commas.
 	* Moves the overlay to the right and uses right-to-left text
 - `scale`
 	* Scales the overlay by 1.5x, for use on 1080p canvases
+- `bsr`
+	* Show beatsaver's map key
+- `no-performance`
+	* No performance data is displayed
 - `test`
 	* Makes the background black, for testing purposes

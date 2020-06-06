@@ -12,10 +12,12 @@ const ui = (() => {
 		}
 
 		return (data) => {
-			score.innerText = format(data.score);
-			combo.innerText = data.combo;
-			rank.innerText = data.rank;
-			percentage.innerText = (data.currentMaxScore > 0 ? (Math.floor((data.score / data.currentMaxScore) * 1000) / 10) : 0) + "%";
+			if (performance_display) {
+				score.innerText = format(data.score);
+				combo.innerText = data.combo;
+				rank.innerText = data.rank;
+				percentage.innerText = (data.currentMaxScore > 0 ? (Math.floor((data.score / data.currentMaxScore) * 1000) / 10) : 0) + "%";
+			}
 		}
 	})();
 
@@ -102,6 +104,8 @@ const ui = (() => {
 		var difficulty = document.getElementById("difficulty");
 		var bpm = document.getElementById("bpm");
 		var njs = document.getElementById("njs");
+		var bsr = document.getElementById("bsr");
+		var httpRequest = new XMLHttpRequest();
 		
 		function format(number) {
 			if (Number.isNaN(number)) {
@@ -124,6 +128,20 @@ const ui = (() => {
 
 			title.innerText = data.songName;
 			subtitle.innerText = data.songSubName;
+			bsr.innerText = '';
+			
+			httpRequest.onreadystatechange = function() {
+				if(this.readyState == 4 && this.status == 200 && this.response) {
+					bsr.innerText = 'bsr ' + this.response.key;
+				}
+			}
+			
+			if (bsr_display && data.songHash != null && data.songHash.match(/^[0-9A-F]{40}/i)) {
+				httpRequest.open('GET', 'https://beatsaver.com/api/maps/by-hash/' + data.songHash.substr(0, 40), true);
+				httpRequest.timeout = 5000;
+				httpRequest.responseType = 'json';
+				httpRequest.send(null);
+			}
 			
 			if (data.levelAuthorName) {
 				artist.innerText = `${data.songAuthorName} [${data.levelAuthorName}]`;
