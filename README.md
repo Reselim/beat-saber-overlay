@@ -1,47 +1,66 @@
-# (Unnamed) Beat Saber Overlay
+# Beat Saber Overlay bsr,no_performance オプション追加版
 
-A web-based overlay for Beat Saber
+これは、Reselim氏が製作した[Beat Saber Overlay](https://github.com/Reselim/beat-saber-overlay)に、bsr表示(bsr)とスコア表示無し(no_performance)のオプションを追加したバージョンです。
 
-![preview](https://i.imgur.com/fOg4TUp.png)
+Beat SaberをOBS等で配信や録画する時に譜面情報をオーバーレイ表示します。
 
-## Installation (OBS)
+![preview](https://rynan4818.github.io/beatsaber-overlay-bsr-image.png)
 
-1. Download and install the [BeatSaberHTTPStatus plugin](https://github.com/opl-/beatsaber-http-status/releases)
-2. Create a Browser source
+## インストール方法 (OBS)
 
-![image](https://i.imgur.com/WyTjdtd.png)
+1. [Beat Saber HTTP Status](https://github.com/opl-/beatsaber-http-status) か、拙作の[Beat Saber HTTP Status +Database](https://github.com/rynan4818/beatsaber-http-status-db)をダウンロードしてインストールします。
 
-3. Set the URL as `http://reselim.github.io/overlay/` (HTTP, not HTTPS!) and the size equal to your canvas size (1280x720, etc.)
+- HTTP StatusはRelease v1.11.1以降のバージョンを使用して下さい。(6/28現在 ModAssistantで対応済み)
+- HTTP Status +DatabaseはRelease v2020/06/08以降を使用して下さい。
 
-![image](https://imgur.com/KxowYrw.png)
+2. [リリースページ](https://github.com/rynan4818/beat-saber-overlay-noscore/releases)から最新のリリースをダウンロードします。
 
-4. (Optional) For 1080p canvases, add the `scale` modifier (ex. `http://reselim.github.io/overlay/?modifiers=scale`) to scale the overlay by 1.5x
+3. zipを適当なフォルダに解凍します。例: C:\TOOL\beat-saber-overlay-bsr_no-performance_add\
 
-## Options
+4. OBSのソースにブラウザを追加します。
 
-Options are added to the URL query as such:
+![image](https://rynan4818.github.io/beatsaber-overlay-noscore-obs-setting1.png)
+
+5. zipを解凍したフォルダ名に合わせてプロパティのURLに `file:///C:/TOOL/beat-saber-overlay-bsr_no-performance_add/index.html?modifiers=bsr` の様に設定します。また、画面サイズと同じ幅と高さに設定します。 (1280x720 など)
+
+![image](https://rynan4818.github.io/beatsaber-overlay-bsr-obs-setting.png)
+
+ローカルファイルだと、オプション設定が出来ないのでURL表記で入力する必要があります。解凍したファイルのindex.htmlをブラウザで開いて、アドレス欄からコピー＆ペーストするのが楽です。
+
+6. (オプション) 1080p(1920x1080)の画面サイズの場合,オーバレイ表示を1.5倍に拡大する `scale` 修飾子を使用して下さい。例: `file:///C:/TOOL/beat-saber-overlay-bsr_no-performance_add/index.html?modifiers=bsr,scale`
+
+## オプション
+
+次の様なオプションがURLに設定可能です。
 
 ```
-http://reselim.github.io/overlay/?modifiers=top
+file:///C:/TOOL/beat-saber-overlay-bsr_no-performance_add/index.html?modifiers=top,bsr
 ```
-
-### `ip` and `port`
-
-Listen to events from another IP and/or port.
 
 ### `modifiers`
 
-Multiple modifiers can be seperated with commas.
+複数のオプションは,(カンマ)で区切ることができます。
 
 - `top`
-	* Moves the overlay to the top and reverses the layout vertically
+	* オーバーレイの表示を上部に配置し、レイアウトを垂直方向に反転します。
 - `rtl`
-	* Moves the overlay to the right and uses right-to-left text
+	* オーバーレイを右に移動し、右揃えのレイアウトにします。
 - `scale`
-	* Scales the overlay by 1.5x, for use on 1080p canvases
-- `bsr`
-	* Show beatsaver's map key
-- `no-performance`
-	* No performance data is displayed
+	* 1080p(1920x1080)の画面で使用するために、オーバーレイを1.5倍にスケーリングします。
 - `test`
-	* Makes the background black, for testing purposes
+	* テストのために背景を黒にします。
+- `bsr`
+	* bsrの検索・表示をします。（今回追加）
+- `no_performance`
+	* スコア表示を消します。　 （今回追加）
+
+### bsrの表示位置や文字サイズを変更したい場合
+
+表示位置を変更したい場合は`index.html`の以下の部分を修正して下さい。
+![image](https://rynan4818.github.io/beatsaber-overlay-index-html.png)
+
+文字サイズなどは`style.css`の以下を修正して下さい。
+![image](https://rynan4818.github.io/beatsaber-overlay-css.png)
+
+## 正式公開について
+上記改造版は本家に[プルリクエスト](https://github.com/Reselim/beat-saber-overlay/pull/15)依頼済みです。[2020/6/6]
