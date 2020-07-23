@@ -63,4 +63,6 @@ file:///C:/TOOL/beat-saber-overlay-bsr_no-performance_add/index.html?modifiers=t
 ![image](https://rynan4818.github.io/beatsaber-overlay-css.png)
 
 ## 正式公開について
-上記改造版は本家に[プルリクエスト](https://github.com/Reselim/beat-saber-overlay/pull/15)依頼済みです。[2020/6/6]
+~~上記改造版は本家に[プルリクエスト](https://github.com/Reselim/beat-saber-overlay/pull/15)依頼済みです。[2020/6/6]~~
+
+オリジナルのリポジトリがアーカイブされてしまったので、このままここに置いておきます。
