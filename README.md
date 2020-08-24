@@ -1,4 +1,4 @@
-# Beat Saber Overlay bsr,no_performance オプション追加版
+# Beat Saber Overlay bsr,no-performance オプション追加版
 
 これは、Reselim氏が製作した[Beat Saber Overlay](https://github.com/Reselim/beat-saber-overlay)に、bsr表示(bsr)とスコア表示無し(no-performance)のオプションを追加したバージョンです。
 
