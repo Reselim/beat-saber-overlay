@@ -15,26 +15,26 @@ Beat SaberをOBS等で配信や録画する時に譜面情報をオーバーレ�
 
 2. [リリースページ](https://github.com/rynan4818/beat-saber-overlay-noscore/releases)から最新のリリースをダウンロードします。
 
-3. zipを適当なフォルダに解凍します。例: C:\TOOL\beat-saber-overlay-bsr_no-performance_add\
+3. zipを適当なフォルダに解凍します。例: C:\TOOL\beat-saber-overlay-bsr_no-performance\
 
 4. OBSのソースにブラウザを追加します。
 
 ![image](https://rynan4818.github.io/beatsaber-overlay-noscore-obs-setting1.png)
 
-5. zipを解凍したフォルダ名に合わせてプロパティのURLに `file:///C:/TOOL/beat-saber-overlay-bsr_no-performance_add/index.html?modifiers=bsr` の様に設定します。また、画面サイズと同じ幅と高さに設定します。 (1280x720 など)
+5. zipを解凍したフォルダ名に合わせてプロパティのURLに `file:///C:/TOOL/beat-saber-overlay-bsr_no-performance/index.html?modifiers=bsr` の様に設定します。また、画面サイズと同じ幅と高さに設定します。 (1280x720 など)
 
 ![image](https://rynan4818.github.io/beatsaber-overlay-bsr-obs-setting.png)
 
 ローカルファイルだと、オプション設定が出来ないのでURL表記で入力する必要があります。解凍したファイルのindex.htmlをブラウザで開いて、アドレス欄からコピー＆ペーストするのが楽です。
 
-6. (オプション) 1080p(1920x1080)の画面サイズの場合,オーバレイ表示を1.5倍に拡大する `scale` 修飾子を使用して下さい。例: `file:///C:/TOOL/beat-saber-overlay-bsr_no-performance_add/index.html?modifiers=bsr,scale`
+6. (オプション) 1080p(1920x1080)の画面サイズの場合,オーバレイ表示を1.5倍に拡大する `scale` 修飾子を使用して下さい。例: `file:///C:/TOOL/beat-saber-overlay-bsr_no-performance/index.html?modifiers=bsr,scale`
 
 ## オプション
 
 次の様なオプションがURLに設定可能です。
 
 ```
-file:///C:/TOOL/beat-saber-overlay-bsr_no-performance_add/index.html?modifiers=top,bsr
+file:///C:/TOOL/beat-saber-overlay-bsr_no-performance/index.html?modifiers=top,bsr
 ```
 
 ### `modifiers`
@@ -65,7 +65,7 @@ file:///C:/TOOL/beat-saber-overlay-bsr_no-performance_add/index.html?modifiers=t
 デフォルトで右側表示になります。`rtl`オプション以外はそのまま使用可能です。
 
 ```
-file:///C:/TOOL/beat-saber-overlay-bsr_no-performance_add/index_rtl.html?modifiers=top,bsr
+file:///C:/TOOL/beat-saber-overlay-bsr_no-performance/index_rtl.html?modifiers=top,bsr
 ```
 
 ### bsrの表示位置や文字サイズを変更したい場合
