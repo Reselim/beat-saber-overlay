@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Overlay</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="rtl2.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet"> 
+	</head>
+	
+	<body>
+		<div id="overlay" class="hidden">
+			<div id="performance">
+				<div class="performance-group">
+					<span class="subtext" id="percentage">0%</span>
+					<span class="text" id="rank">E</span>
+				</div>
+
+				<div class="performance-group">
+					<span class="subtext" id="combo_text">Combo</span>
+					<span class="text" id="combo">0</span>
+				</div>
+				
+				<span id="score">0</span>
+			</div>
+
+			<div id="beatmap">
+				<div id="meta">
+					<div id="text">
+						<div id="titles">
+							<span id="subtitle">Subtitle</span>
+							<span id="title">Title</span>
+						</div>
+
+						<span id="artist">Artist</span>
+					</div>
+					<div>
+						<span id="bsr">bsr 0000</span>
+					</div>
+					<div>
+						<span id="njs">0 NJS</span>
+						<span id="bpm">0 BPM</span>
+						<span id="difficulty">Easy</span>
+					</div>
+				</div>
+				<div id="cover">
+					<img id="image">
+					
+					<svg width="90" height="90">
+						<rect width="90" height="90" id="darken"></rect>
+						<circle cx="45" cy="45" r="30" id="remaining"></circle>
+						<circle cx="45" cy="45" r="30" id="progress"></circle>
+					</svg>
+
+					<div>
+						<span id="progress-text">0:00</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/options.js"></script>
+		
+		<script src="./js/ui.js"></script>
+		<script src="./js/events.js"></script>
+		<script src="./js/manager.js"></script>
+	</body>
+</html>

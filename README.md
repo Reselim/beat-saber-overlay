@@ -44,7 +44,7 @@ file:///C:/TOOL/beat-saber-overlay-bsr_no-performance_add/index.html?modifiers=t
 - `top`
 	* オーバーレイの表示を上部に配置し、レイアウトを垂直方向に反転します。
 - `rtl`
-	* オーバーレイを右に移動し、右揃えのレイアウトにします。
+	* オーバーレイを右に移動し、右揃えのレイアウトにします。	`!`と`.`の表示に問題があります。（下記参照)
 - `scale`
 	* 1080p(1920x1080)の画面で使用するために、オーバーレイを1.5倍にスケーリングします。
 - `test`
@@ -53,6 +53,20 @@ file:///C:/TOOL/beat-saber-overlay-bsr_no-performance_add/index.html?modifiers=t
 	* bsrの検索・表示をします。（今回追加）
 - `no-performance`
 	* スコア表示を消します。　 （今回追加）
+
+### `rtl`の表示修正
+
+上記`rtl`オプションを使用すると、下記画像の様に`!`や`.`の表示位置がおかしくなる問題があります。
+
+![image](https://github.com/rynan4818/rynan4818.github.io/blob/master/beatsaber-overlay-rtl2.png?raw=true)
+
+この問題を修正するため、`rtl`オプションの代わりに、`index_rtl.html`を追加しました。
+`index.html`の代わりに`index_rtl.html`に変更して使用してください。
+デフォルトで右側表示になります。`rtl`オプション以外はそのまま使用可能です。
+
+```
+file:///C:/TOOL/beat-saber-overlay-bsr_no-performance_add/index_rtl.html?modifiers=top,bsr
+```
 
 ### bsrの表示位置や文字サイズを変更したい場合
 

@@ -1,0 +1,17 @@
+#overlay {
+	direction: ltr;
+	right: 40px;
+    text-align: right;
+}
+
+#titles {
+	display: block;
+}
+
+#njs {
+	direction: rtl;
+}
+
+#score {
+	transform: translate(2px, 0);
+}
