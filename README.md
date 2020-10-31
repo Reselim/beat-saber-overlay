@@ -86,7 +86,7 @@ file:///C:/TOOL/beat-saber-overlay-bsr_no-performance/simple.html?modifiers=bsr
 
 | id | 動作 |
 ----|----
-| overlay | プレイ開始時にclass="hidden"を付与、終了時に削除します。 |
+| overlay | プレイ開始時にclass="hidden"を削除、終了時に付与します。 |
 | rank | スコアのランク(SS,S,A,B,C・・・)に書き換えます。 |
 | percentage | スコアの精度(xx.x%)に書き換えます。 |
 | combo | コンボ数に書き換えます。 |
