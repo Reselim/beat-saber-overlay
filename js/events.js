@@ -3,14 +3,14 @@ const events = {
 		console.log("Connected to Beat Saber");
 
 		if (data.beatmap && data.performance) {
-			ui.beatmap(data.beatmap, time);
+			ui.beatmap(data.beatmap, time, data.mod);
 			ui.performance(data.performance);
 			ui.show();
 		}
 	},
 
 	songStart(data, time) {
-		ui.beatmap(data.beatmap, time);
+		ui.beatmap(data.beatmap, time, data.mod);
 		ui.performance(data.performance);
 		ui.show();
 	},
@@ -31,6 +31,8 @@ const events = {
 
 	menu() {
 		ui.timer.stop();
-		ui.hide();
+		if (disp_hidden) {
+			ui.hide();
+		}
 	}
 }

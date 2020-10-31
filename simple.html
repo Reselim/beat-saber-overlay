@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Overlay</title>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet"> 
+	</head>
+	
+	<body>
+		<div id="overlay" class="hidden">
+			<div id="performance">
+				<div class="performance-group">
+					<span class="text" id="percentage">0%</span>
+					<span class="text" id="score" style="display:inline-block;font-size:18px;font-weight:600;">0</span>
+				</div>
+				<div>
+					<span id="title" style="display:inline-block;font-size: 22px;font-weight: 600;">Title</span>
+					<div id="bsr-group" style="display:inline-block;font-size: 15px;font-weight: 600;">
+						<span id="bsr_text"> bsr: </span><span id="bsr" style="font-size:15px;font-weight:600;">00000</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/options.js"></script>
+		
+		<script src="./js/ui.js"></script>
+		<script src="./js/events.js"></script>
+		<script src="./js/manager.js"></script>
+	</body>
+</html>

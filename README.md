@@ -53,6 +53,8 @@ file:///C:/TOOL/beat-saber-overlay-bsr_no-performance/index.html?modifiers=top,b
 	* bsrの検索・表示をします。（今回追加）
 - `no-performance`
 	* スコア表示を消します。　 （今回追加）
+- `no-hidden`
+	* 終了時に表示を消しません。（今回追加）
 
 ### `rtl`の表示修正
 
@@ -67,8 +69,51 @@ file:///C:/TOOL/beat-saber-overlay-bsr_no-performance/index.html?modifiers=top,b
 ```
 file:///C:/TOOL/beat-saber-overlay-bsr_no-performance/index_rtl.html?modifiers=top,bsr
 ```
+## BSDP-Overlayライクなオーバーレイ
+[DataPuller](https://github.com/kOFReadie/BSDataPuller)の[BSDP-Overlay](https://github.com/kOFReadie/BSDP-Overlay)ライクなオーバーレイ表示用のHTMLとCSSを作成しました。
 
-### bsrの表示位置や文字サイズを変更したい場合
+以下からダウンロードして、本オーバーレイのインストールフォルダに上書きで追加インストールすることで使用可能です。
+
+[bsdp-like-overlay](https://github.com/rynan4818/bsdp-like-overlay)
+
+## オーバーレイの改造
+スクリプトではHTMLタグの以下のidに対して、プレイに合わせた書き換え動作をします。idは起動時にチェックし、HTML内にidが存在しない場合は書き換えないため、HTMLやCSSを改造して好きなレイアウトや表示項目にすることが出来ます。
+
+参考に、精度・スコア・曲名・bsr表示だけにしたシンプルな表示のhtmlを用意しました。
+```
+file:///C:/TOOL/beat-saber-overlay-bsr_no-performance/simple.html?modifiers=bsr
+```
+
+| id | 動作 |
+----|----
+| overlay | プレイ開始時にclass="hidden"を付与、終了時に削除します。 |
+| rank | スコアのランク(SS,S,A,B,C・・・)に書き換えます。 |
+| percentage | スコアの精度(xx.x%)に書き換えます。 |
+| combo | コンボ数に書き換えます。 |
+| score | スコアに書き換えます。 |
+| progress | 曲のプレイ時間の円グラフを表示します。 |
+| performance | no-performance オプション時に、このタグの内容を削除します。 |
+| image | src属性に曲のカバー画像をセットします。 |
+| title | 曲のタイトルに書き換えます。 |
+| subtitle | 曲のサブタイトル情報に書き換えます。 |
+| artist | 曲のアーティスト情報に書き換えます。 |
+| difficulty | 難易度情報に書き換えます。 |
+| bpm | 曲のBPM情報に書き換えます。 |
+| njs | NJS情報に書き換えます。 |
+| njs_text | NJSの項目名を起動時に保持し、NJS表示が出来ない場合は表示を消します。 |
+| bsr | BeatSaverのkey(bsr)情報に書き換えます。 |
+| bsr_text | bsrの項目名を起動時に保持し、NJS表示が出来ない場合は表示を消します。 |
+| mapper | 譜面の作者名を表示します。 |
+| mapper_header | 譜面の作者名のヘッダー表示を起動時に保持し、表示出来ない場合は消します。 |
+| mapper_footer | 譜面の作者名のフッター表示を起動時に保持し、表示出来ない場合は消します。 |
+| song_time | プレイ中の曲の再生時間に書き換えます。 |
+| song_length | 曲の長さの時間に書き換えます。 |
+| mod | 適用中のmod(IF,BE,DA,GN,FS,SS,NF,NO,NB,NA)情報に書き換えます。 |
+| miss | ミス数(ノーツミス＋爆弾カット)に書き換えます。 |
+| pre_bsr | 一つ前にプレイした譜面のbsr情報を表示します。 |
+| pre_bsr_text | pre_bsrの項目名を起動時に保持し、NJS表示が出来ない場合は表示を消します。　|
+
+## bsrの表示位置や文字サイズを変更したい場合
 
 表示位置を変更したい場合は`index.html`の以下の部分を修正して下さい。
 ![image](https://rynan4818.github.io/beatsaber-overlay-index-html.png)
@@ -80,3 +125,4 @@ file:///C:/TOOL/beat-saber-overlay-bsr_no-performance/index_rtl.html?modifiers=t
 ~~上記改造版は本家に[プルリクエスト](https://github.com/Reselim/beat-saber-overlay/pull/15)依頼済みです。[2020/6/6]~~
 
 オリジナルのリポジトリがアーカイブされてしまったので、このままここに置いておきます。
+

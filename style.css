@@ -67,14 +67,14 @@ body {
 	margin: 0 4px 2px 4px;
 }
 
-#artist {
+#artist-group {
 	display: block;
 	font-size: 16px;
 	font-weight: 400;
 	margin: 2px 0 0 0;
 }
 
-#difficulty, #bpm, #njs {
+#difficulty, #bpm-group, #njs-group {
 	display: inline-block;
 
 	font-size: 10px;
@@ -83,7 +83,7 @@ body {
 	letter-spacing: 3px;
 }
 
-#bsr {
+#bsr-group {
 	display: inline-block;
 
 	font-size: 18px;
@@ -100,11 +100,11 @@ body {
 	border-radius: 4px;
 }
 
-#bpm {
+#bpm-group {
 	margin: 0 8px;
 }
 
-#njs {
+#njs-group {
 	margin: 0 0px;
 }
 
